@@ -20,3 +20,6 @@ apiMappings ++= {
       -> url("https://docs.oracle.com/en/java/javase/11/docs/api/java.base")
   )
 }
+
+resolvers += "scala-integration" at
+  "https://scala-ci.typesafe.com/artifactory/scala-integration/"
