@@ -20,6 +20,7 @@ install:
   - cmd: SET PATH=C:\sbt\bin;%JAVA_HOME%\bin;%PATH%
 
 test_script:
+  - java -version
   - sbt ++%SCALA_VERSION% doc
 
 cache:
