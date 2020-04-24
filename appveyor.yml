@@ -2,13 +2,13 @@
 
 environment:
   matrix:
-    - SCALA_VERSION: 2.12.10
+    - SCALA_VERSION: 2.12.11
     - SCALA_VERSION: 2.13.0-M5
     - SCALA_VERSION: 2.13.0-pre-d645559
     - SCALA_VERSION: 2.13.0-pre-c742cff # !
     - SCALA_VERSION: 2.13.0-RC1         # !
     - SCALA_VERSION: 2.13.1             # !
-
+    - SCALA_VERSION: 2.13.2             # !
 
 platform:
   - x86
@@ -16,6 +16,7 @@ platform:
 
 install:
   - cmd: choco install sbt -ia "INSTALLDIR=""C:\sbt"""
+  - cmd: SET JAVA_HOME=C:\Program Files\Java\jdk11
   - cmd: SET PATH=C:\sbt\bin;%JAVA_HOME%\bin;%PATH%
 
 test_script:
